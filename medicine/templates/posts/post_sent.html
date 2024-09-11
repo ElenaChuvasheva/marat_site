@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load thumbnail %}
+
+{% block title %} Отзыв {{ post.text|truncatechars_html:30 }} {% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    Ваш отзыв отправлен и будет размещён на сайте после модерации
+</div>
+<div class="container py-5">
+  <a href={% url 'posts:index' %}>Главная страница</a>
+</div>
+{% endblock %}
