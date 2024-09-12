@@ -114,6 +114,8 @@ USE_TZ = True
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 STATIC_URL = "/static/"
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
 POSTS_PER_PAGE = 3
 POST_AT_INDEX_PAGE = 2
 
