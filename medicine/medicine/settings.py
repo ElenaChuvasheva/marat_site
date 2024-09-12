@@ -16,8 +16,8 @@ ALLOWED_HOSTS = [
     "127.0.0.1",
     "[::1]",
     "testserver",
-    "www.chuvashevaelena.pythonanywhere.com",
-    "chuvashevaelena.pythonanywhere.com",
+    "www.mirrimd.pythonanywhere.com",
+    "mirrimd.pythonanywhere.com",
 ]
 
 INSTALLED_APPS = [
