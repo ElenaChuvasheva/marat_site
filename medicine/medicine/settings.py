@@ -114,7 +114,7 @@ USE_TZ = True
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 STATIC_URL = "/static/"
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = "/home/mirrimd/marat_site/assets"
 
 POSTS_PER_PAGE = 3
 POST_AT_INDEX_PAGE = 2
