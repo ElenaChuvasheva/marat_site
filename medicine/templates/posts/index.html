@@ -41,7 +41,7 @@
   {% endfor %}  
   {% include 'includes/paginator.html' %}
   <nav class="navbar navbar-opinions">
-    <a class="nav-link link-accent" href="{% url 'posts:posts_list' %}">Ещё отзывы</a>
+    <a class="nav-link link-opinions" href="{% url 'posts:posts_list' %}">Ещё отзывы</a>
     <a class="nav-link link-accent" href="{% url 'posts:post_create' %}">Добавить отзыв</a>
   </nav>
 </div>

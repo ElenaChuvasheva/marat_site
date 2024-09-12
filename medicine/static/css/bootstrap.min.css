@@ -11697,8 +11697,12 @@ fieldset:disabled .btn {
     list-style-type: circle;
 }
 
-.link-accent {
+.link-opinions {
     color: #3F888F;
+}
+
+.link-accent {
+    color: #FFA500;
 }
 
 .navbar-opinions {
