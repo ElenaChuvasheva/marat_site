@@ -18,7 +18,6 @@ ALLOWED_HOSTS = [
     "testserver",
     "www.chuvashevaelena.pythonanywhere.com",
     "chuvashevaelena.pythonanywhere.com",
-    "84.201.138.122",
 ]
 
 INSTALLED_APPS = [
@@ -116,3 +115,13 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 STATIC_URL = "/static/"
 
 POSTS_PER_PAGE = 3
+POST_AT_INDEX_PAGE = 2
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {"console": {"class": "logging.StreamHandler"}},
+    "loggers": {
+        "django.db.backends": {"handlers": ["console"], "level": "DEBUG", "propagate": True}
+    },
+}

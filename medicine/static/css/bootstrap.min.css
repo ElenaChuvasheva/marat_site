@@ -11685,9 +11685,26 @@ fieldset:disabled .btn {
     }
 }
 
-li {
+.post-li {
     list-style-type: none;
 }
 
+.spec {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.main-li {
+    list-style-type: circle;
+}
+
+.link-accent {
+    color: #3F888F;
+}
+
+.navbar-opinions {
+    padding-top: 30px;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
 
 /*# sourceMappingURL=bootstrap.min.css.map */

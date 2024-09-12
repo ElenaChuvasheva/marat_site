@@ -12,11 +12,20 @@ User = get_user_model()
 
 def index(request):
     """Главная страница."""
-    page_obj = paginate_posts(request, Post.objects.filter(visible=True))
+    # page_obj = paginate_posts(request, Post.objects.filter(visible=True))
+    page_obj = Post.objects.filter(visible=True)[:3]
     context = {
         "page_obj": page_obj,
     }
     return render(request, "posts/index.html", context)
+
+
+def posts_list(request):
+    page_obj = paginate_posts(request, Post.objects.filter(visible=True))
+    context = {
+        "page_obj": page_obj,
+    }
+    return render(request, "posts/posts_list.html", context)
 
 
 def post_detail(request, post_id):

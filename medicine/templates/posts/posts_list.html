@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Семейный врач{% endblock %}
+
+{% block content%}
+<div class="container" style="padding-top: 20px;">
+</div>
+<div class="container py-5">
+  <h2>Отзывы</h1>
+  {% for post in page_obj %}
+  <article>
+    {% include 'includes/post.html' %}    
+  </article>
+  {% if not forloop.last %}<hr>{% endif %}
+  {% endfor %}  
+  {% include 'includes/paginator.html' %}
+  <nav class="navbar navbar-opinions">
+    <a class="nav-link link-accent" href="{% url 'posts:index' %}">На главную</a>
+    <a class="nav-link link-accent" href="{% url 'posts:post_create' %}">Добавить отзыв</a>
+  </nav>
+</div>
+{% endblock %}

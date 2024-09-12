@@ -1,21 +1,14 @@
 {% load thumbnail %}
 
 <ul>
-  {% with request.resolver_match.view_name as view_name %}
-  {% if view_name != 'posts:profile' %}
-  <li>    
-    {{ post.author }} 
-  </li>
-  {% endif %}
-  <li>
+  <li class="post-li">
     {{ post.pub_date|date:"d E Y H:m:s" }}
   </li>
-  {% endwith %}
 </ul>      
 {% thumbnail post.image "960x339" upscale=True as im %}
   <img src="{{ im.url }}" style="display: block; margin: 0 auto; max-width: 80%;" >
 {% endthumbnail %}      
-<p>{{ post.text|truncatechars:1500 }}</p>
-{% if view_name != 'posts:profile' and post.text|length >= 1500 %}
+<p>{{ post.text|truncatechars:300 }}</p>
+{% if view_name != 'posts:profile' and post.text|length >= 300 %}
 <a href="{% url 'posts:post_detail' post.pk %}">Читать отзыв полностью</a>
 {% endif %}
