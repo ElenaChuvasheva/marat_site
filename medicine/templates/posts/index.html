@@ -38,8 +38,9 @@
     <div>Стоимость других услуг см. <a href="{% url 'posts:services_list' %}">здесь</a></div>
   </div>
 </div>
-<div class="container py-5">
-  <h2>Отзывы</h1>
+<hr>
+<div class="container py-5 centered">
+  <h2 class="centered">Отзывы</h2>
   {% for post in page_obj %}
   <article>
     {% include 'includes/post.html' %}    
