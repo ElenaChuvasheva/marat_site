@@ -4402,6 +4402,11 @@ fieldset:disabled .btn {
     border-top-right-radius: 0
 }
 
+.nav-pills {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .nav-pills .nav-link {
     background: 0 0;
     border: 0;
@@ -4445,7 +4450,7 @@ fieldset:disabled .btn {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding-top: .5rem;
     padding-bottom: .5rem
 }
@@ -11734,6 +11739,14 @@ th {
     /* Выравнивание текста по левому краю */
     border-bottom: 1px solid #000;
     /* Линия под верхним заголовком */
+}
+
+.centered {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 20px !important;
 }
 
 /*# sourceMappingURL=bootstrap.min.css.map */

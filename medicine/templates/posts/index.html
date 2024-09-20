@@ -7,10 +7,10 @@
 {% block content%}
 <div class="container" style="padding-top: 20px;">
   {% comment %} <img src="{% static 'img/doctor-og.jpg' %}" width="50%" alt="" style="float: left; margin-right: 20px; margin-bottom: 20px;"> {% endcomment %}
-  <div class="container py-5" style="margin-top: 0; padding-top: 0 !important;">
+  <div class="container centered" style="margin-top: 0;">
     Доктор медицинских наук. Работаю с опорно-двигательным аппаратом
   </div>
-  <div class="container spec">
+  <div class="container spec centered">
     <h3 class="main-h3 medicine-h3">Специализация</h3>
     <ul>
       <li class="main-li">
@@ -33,11 +33,11 @@
       </li>
     </ul>
   </div>
-<div class="container py-5" style="margin-top: 0; padding-top: 20px !important;">
-  <h3 class="main-h3 medicine-h3">Цены</h3>
-  {% include 'posts/services_table.html' %}
-   Стоимость других услуг см. <a href="{% url 'posts:services_list' %}">здесь</a>.
-</div>
+  <div class="container centered" style="margin-top: 0;">
+    <h3 class="main-h3 medicine-h3">Цены</h3>
+    {% include 'posts/services_table.html' %}
+    <div>Стоимость других услуг см. <a href="{% url 'posts:services_list' %}">здесь</a></div>
+  </div>
 </div>
 <div class="container py-5">
   <h2>Отзывы</h1>
