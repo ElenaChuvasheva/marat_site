@@ -21,3 +21,19 @@ class Post(models.Model):
 
     def __str__(self):
         return self.text[:15]
+
+
+class Service(models.Model):
+    name = models.CharField(max_length=200, verbose_name="Название")
+    price = models.IntegerField(verbose_name="Цена")
+    for_main_page = models.BooleanField(
+        verbose_name="Показывать на главной странице", default=False
+    )
+
+    class Meta:
+        verbose_name = "Услуга"
+        verbose_name_plural = "Услуги"
+        ordering = ("pk",)
+
+    def __str__(self):
+        return f"{self.name} {self.price} р"

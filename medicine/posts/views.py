@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404, render
 
 from .forms import PostForm
-from .models import Post
+from .models import Post, Service
 from .utils import paginate_posts
 
 User = get_user_model()
@@ -16,6 +16,7 @@ def index(request):
     page_obj = Post.objects.filter(visible=True)[:3]
     context = {
         "page_obj": page_obj,
+        "service_list": Service.objects.filter(for_main_page=True),
     }
     return render(request, "posts/index.html", context)
 
@@ -26,6 +27,12 @@ def posts_list(request):
         "page_obj": page_obj,
     }
     return render(request, "posts/posts_list.html", context)
+
+
+def services_list(request):
+    services = Service.objects.all()
+    context = {"service_list": services}
+    return render(request, "posts/services_list.html", context)
 
 
 def post_detail(request, post_id):

@@ -14,7 +14,7 @@
     {% include 'includes/post.html' %}    
   </article>
   {% if not forloop.last %}<hr>{% endif %}
-  {% endfor %}  
+  {% endfor %}
   {% include 'includes/paginator.html' %}
   <nav class="navbar navbar-opinions">
     <a class="nav-link link-opinions" href="{% url 'posts:index' %}">На главную</a>

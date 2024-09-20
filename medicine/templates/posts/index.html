@@ -6,29 +6,37 @@
 
 {% block content%}
 <div class="container" style="padding-top: 20px;">
-  <img src="{% static 'img/doctor-og.jpg' %}" width="50%" alt="" style="float: left; margin-right: 20px; margin-bottom: 20px;">
+  {% comment %} <img src="{% static 'img/doctor-og.jpg' %}" width="50%" alt="" style="float: left; margin-right: 20px; margin-bottom: 20px;"> {% endcomment %}
   <div class="container py-5" style="margin-top: 0; padding-top: 0 !important;">
-    Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+    Доктор медицинских наук. Работаю с опорно-двигательным аппаратом
   </div>
   <div class="container spec">
-    <h3 class="main-h3">Специализация</h3>
+    <h3 class="main-h3 medicine-h3">Специализация</h3>
     <ul>
       <li class="main-li">
-        Пункт раз
+        Снятие острых состояний, болевых синдромов
       </li>
       <li class="main-li">
-        Пункт два
+        Лечение болей в спине, суставных болей
       </li>
       <li class="main-li">
-        Пункт три
+        Снятие функциональных блоков опорно-двигательного аппарата
       </li>
       <li class="main-li">
-        Пункт четыре
+        Возвращение подвижности
+      </li>
+      <li class="main-li">
+        Работа с сознанием
+      </li>
+      <li class="main-li">
+        Нормализация работы организма
       </li>
     </ul>
   </div>
-<div class="container py-5" style="margin-top: 0; padding-top: 0 !important;">
-  Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit
+<div class="container py-5" style="margin-top: 0; padding-top: 20px !important;">
+  <h3 class="main-h3 medicine-h3">Цены</h3>
+  {% include 'posts/services_table.html' %}
+   Стоимость других услуг см. <a href="{% url 'posts:services_list' %}">здесь</a>.
 </div>
 </div>
 <div class="container py-5">
