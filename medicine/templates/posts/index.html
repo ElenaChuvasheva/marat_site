@@ -5,10 +5,10 @@
 {% block title %}Семейный врач{% endblock %}
 
 {% block content%}
-<div class="container" style="padding-top: 20px; height: 100vh;">
-  {% comment %} <img src="{% static 'img/doctor-og.jpg' %}" width="50%" alt="" style="float: left; margin-right: 20px; margin-bottom: 20px;"> {% endcomment %}
-  <div class="container centered" style="margin-top: 0;">
-    Доктор медицинских наук. Работаю с опорно-двигательным аппаратом
+<div class="container" style="display: flex; flex-direction: column; justify-content: center; padding-top: 20px;">
+  <div class="container" style="margin-top: 0;">
+    {% comment %} <img src="{% static 'img/doctor-og.jpg' %}" width="50%" alt="" style="float: left; margin-right: 20px; margin-bottom: 20px;"> {% endcomment %}
+    <div class="centered">Доктор медицинских наук. Работаю с опорно-двигательным аппаратом</div>
   </div>
   <div class="container spec centered">
     <h3 class="main-h3 medicine-h3">Специализация</h3>
@@ -39,7 +39,7 @@
   </div>
 </div>
 <hr>
-<div class="container py-5">
+<div class="container py-5" style="padding-top: 0 !important;">
   <h2 class="centered">Отзывы</h2>
   {% for post in page_obj %}
   <article>
