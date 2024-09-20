@@ -4,7 +4,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = "azaza"
 
-DEBUG = True
+DEBUG = False
 
 CSRF_FAILURE_VIEW = "core.views.csrf_failure"
 
